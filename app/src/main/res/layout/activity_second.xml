@@ -5,7 +5,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".SecondActivity">
+  tools:context=".SecondActivity"
+    android:orientation="vertical">
 
   <include
     android:layout_width="match_parent"
@@ -13,6 +14,17 @@
     layout="@layout/toolbar"
     >
   </include>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="@string/introduction"
+      android:textSize="40dp"
+      android:textColor="@color/niceColor"
+
+
+      />
 
 
 

@@ -1,12 +1,17 @@
 package communa.romanoff.com.communa;
 
+import android.content.Intent;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,11 +19,14 @@ public class MainActivity extends AppCompatActivity {
   private Toolbar toolbar;
 
 
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    
+    final TextInputEditText name = findViewById(R.id.name_edit_text);
+    final TextInputEditText country = findViewById(R.id.country_edit_text);
+
 
     toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
@@ -44,7 +52,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (noErrors) {
-          // All fields are valid!
+
+            Intent mainToNextIntent = new Intent(getApplicationContext(), SecondActivity.class);
+            mainToNextIntent.putExtra("userName",name.getText().toString());
+            mainToNextIntent.putExtra("country",country.getText().toString());
+            startActivity(mainToNextIntent);
         }
       }
     });

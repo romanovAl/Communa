@@ -11,6 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     layout="@layout/toolbar"
+
     >
 
   </include>
@@ -28,13 +29,16 @@
       >
 
       <TextView
+        android:id="@+id/introduction1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/introduction"
         android:textColor="@color/niceColor"
         android:textSize="40dp" />
+
       <TextView
+          android:id="@+id/introduction2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -98,6 +102,7 @@
           android:text="@string/button_next" />
 
         <TextView
+          android:id="@+id/already_have_account"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="end"

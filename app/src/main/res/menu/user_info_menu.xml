@@ -2,6 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
   <item
     android:id="@+id/action_search"
     app:showAsAction="always"
@@ -9,5 +11,15 @@
     android:title="titleHint">
 
   </item>
+
+  <item
+      android:id="@+id/action_search"
+      app:showAsAction="always"
+      android:icon="@drawable/settingswhite"
+      android:title="titleHint">
+
+  </item>
+
+
 
 </menu>
