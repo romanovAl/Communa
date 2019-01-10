@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">Communa</string>
+  <string name="introduction">HELLO</string>
+  <string name="introduction2">LET\'S GET ACQUAINTED</string>Let's get acquainted
+  -----------------hints--------------------
+  <string name="hint_name">What is your name?</string>
+
+  <string name="hint_country">What is your country?</string>
+  -----------------hints--------------------
+  -----------------buttons--------------------
+  <string name="button_next">LET\'S GET STARTED!</string>
+  -----------------buttons--------------------
+  -----------------errors--------------------
+  <string name="error_string">Field must not be empty</string>
+</resources>
