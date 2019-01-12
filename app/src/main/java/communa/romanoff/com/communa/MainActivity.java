@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 import java.io.Serializable;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
   private Toolbar toolbar;
 
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity  {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
 
 //    ---------------------initialize elements---------------------
     final TextInputEditText name = findViewById(R.id.name_edit_text);
@@ -59,25 +59,30 @@ public class MainActivity extends AppCompatActivity  {
 
         if (noErrors) {
 
-            Intent mainToNextIntent = new Intent(getApplicationContext(), SecondActivity.class);
-            User user = new User(name.getText().toString(),country.getText().toString());
-            mainToNextIntent.putExtra("userObject", user);
-            startActivity(mainToNextIntent);
+          Intent mainToNextIntent = new Intent(getApplicationContext(), SecondActivity.class);
+          User user = new User(name.getText().toString(), country.getText().toString());
+          mainToNextIntent.putExtra("userObject", user);
+          startActivity(mainToNextIntent);
 
         }
       }
     });
 //    ---------------------fields checking and next activity intent---------------------
 
-
   }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.user_info_menu,menu);
+    getMenuInflater().inflate(R.menu.user_info_menu, menu);
     return true;
   }
 
-
-
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    if (item.getItemId() == R.id.action_settings) {
+      Intent intent = new Intent(this, SettingsActivity.class);
+      startActivity(intent);
+    }
+    return true;
+  }
 }

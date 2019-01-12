@@ -9,8 +9,11 @@
   <string name="hint_city">What is your city?</string>
   -----------------hints--------------------
   -----------------buttons--------------------
-  <string name="button_next">LET\'S GET STARTED!</string>
+  <string name="first_activity_next">LET\'S GET STARTED!</string>
+  <string name="second_activity_next">Next</string>
   -----------------buttons--------------------
   -----------------errors--------------------
   <string name="error_string">Field must not be empty</string>
+  <string name="title_activity_settings">Settings</string>
+
 </resources>

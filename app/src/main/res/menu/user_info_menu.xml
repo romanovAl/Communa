@@ -3,9 +3,9 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <item
-    android:id="@+id/action_search"
-    app:showAsAction="always"
+    android:id="@+id/action_settings"
     android:icon="@drawable/settingswhite"
-    android:title="titleHint"/>
+    android:title="titleHint"
+    app:showAsAction="always"/>
 
 </menu>
