@@ -34,16 +34,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/introduction"
-        android:textColor="@color/niceColor"
+        android:textColor="@color/niceBlueColor"
         android:textSize="40dp" />
 
       <TextView
-          android:id="@+id/introduction2"
+        android:id="@+id/introduction2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/introduction2"
-        android:textColor="@color/niceColor"
+        android:textColor="@color/niceBlueColor"
         android:textSize="40dp" />
       <LinearLayout
         android:layout_width="match_parent"

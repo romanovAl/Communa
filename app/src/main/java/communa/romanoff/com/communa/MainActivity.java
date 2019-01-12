@@ -12,9 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
   private Toolbar toolbar;
 
@@ -23,14 +24,19 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    
+
+
+//    ---------------------initialize elements---------------------
     final TextInputEditText name = findViewById(R.id.name_edit_text);
     final TextInputEditText country = findViewById(R.id.country_edit_text);
+//    ---------------------initialize elements---------------------
 
-
+//    ---------------------actions with toolbar---------------------
     toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+//    ---------------------actions with toolbar---------------------
 
+//    ---------------------fields checking and next activity intent---------------------
     View rootView = findViewById(android.R.id.content);
 
     final List<TextInputLayout> textInputLayouts = Utils.findViewsWithType(
@@ -54,20 +60,24 @@ public class MainActivity extends AppCompatActivity {
         if (noErrors) {
 
             Intent mainToNextIntent = new Intent(getApplicationContext(), SecondActivity.class);
-            mainToNextIntent.putExtra("userName",name.getText().toString());
-            mainToNextIntent.putExtra("country",country.getText().toString());
+            User user = new User(name.getText().toString(),country.getText().toString());
+            mainToNextIntent.putExtra("userObject", user);
             startActivity(mainToNextIntent);
+
         }
       }
     });
-
+//    ---------------------fields checking and next activity intent---------------------
 
 
   }
+
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.user_info_menu,menu);
     return true;
   }
+
+
 
 }

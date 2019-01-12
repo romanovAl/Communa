@@ -4,15 +4,8 @@
   android:id="@+id/toolbar"
   style="@style/Toolbar"
   app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-  android:background="@color/niceColor"
-    android:orientation="horizontal"
+  android:orientation="horizontal"
   >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="NAME"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:gravity="center"/>
+
 
 </android.support.v7.widget.Toolbar>

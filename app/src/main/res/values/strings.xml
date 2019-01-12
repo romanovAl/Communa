@@ -4,8 +4,9 @@
   <string name="introduction2">LET\'S GET ACQUAINTED</string>Let's get acquainted
   -----------------hints--------------------
   <string name="hint_name">What is your name?</string>
-
   <string name="hint_country">What is your country?</string>
+  <string name="hint_action">What are you going to do?</string>
+  <string name="hint_city">What is your city?</string>
   -----------------hints--------------------
   -----------------buttons--------------------
   <string name="button_next">LET\'S GET STARTED!</string>
